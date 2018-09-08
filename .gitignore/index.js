@@ -12,8 +12,8 @@ db.defaults({ histoires: [], xp: []}).write()
 var prefix = (".")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: *help");
-    console.log("Connectedç");
+    bot.user.setGame("Command: .help");
+    console.log("Connected");
 });
 
 bot.login("NDg4MDI1NTA0NTY2MzQ1NzI4.DnWNZw.wa7HYBMv4zrRaw46SXZiEWVrgkI");
@@ -25,7 +25,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "bot"){
-        message.channel("Création du bot le _08/09/2018_ à _19h04_");
+        message.channel.sendMessage("Création du bot le _08/09/2018_ à _19h04_");
         console.log("Commande effectué");
     }
 
