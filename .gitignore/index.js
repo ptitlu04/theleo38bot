@@ -9,7 +9,7 @@ const db = low(adapter);
 
 db.defaults({ histoires: [], xp: []}).write()
 
-var prefix = ("*")
+var prefix = (".")
 
 bot.on('ready', function() {
     bot.user.setGame("Command: *help");
@@ -21,7 +21,7 @@ bot.login("NDg4MDI1NTA0NTY2MzQ1NzI4.DnWNZw.wa7HYBMv4zrRaw46SXZiEWVrgkI");
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("Liste des commandes : \n -*help \n -*bot");
+        message.channel.sendMessage("Liste des commandes : \n -.help \n -.bot");
     }
 
     if (message.content === prefix + "bot"){
